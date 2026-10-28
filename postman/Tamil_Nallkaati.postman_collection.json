@@ -1,0 +1,73 @@
+{
+  "info": {
+    "name": "Tamil Nallkaati API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/health"
+      }
+    },
+    {
+      "name": "Calendar Day",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/calendar/day?date=2027-04-14&location=chennai"
+      }
+    },
+    {
+      "name": "Calendar Month",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/calendar/month?year=2027&month=4&location=chennai"
+      }
+    },
+    {
+      "name": "Panchangam Day",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/panchangam/day?date=2027-04-14&location=chennai"
+      }
+    },
+    {
+      "name": "Upcoming Festivals",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/festivals/upcoming?location=chennai"
+      }
+    },
+    {
+      "name": "Locations",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/v1/locations"
+      }
+    },
+    {
+      "name": "Create Reminder",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"குடும்ப நிகழ்வு\",\"date\":\"2027-04-14\",\"notes\":\"demo\"}"
+        },
+        "url": "{{baseUrl}}/api/v1/reminders"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:5000"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "city": "chennai",
+  "place": {
+    "label": "Chennai",
+    "lat": 13.0827,
+    "lon": 80.2707
+  },
+  "units": "minutes from IST midnight of that date; >1440 means the next day",
+  "days": []
+}
